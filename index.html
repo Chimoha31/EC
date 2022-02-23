@@ -19,8 +19,8 @@
     </div>
     <div class="icons">
       <ul>
-        <li><a href=""><i class="fas fa-heart"></i></a></li>
-        <li><a href=""><i class="fas fa-cart-arrow-down">(0)</i></a></li>
+        <li><a href=""><i class="fas fa-heart">0</i></a></li>
+        <li><a href=""><i class="fas fa-cart-arrow-down">0</i></a></li>
       </ul>
     </div>
   </header>
@@ -48,10 +48,24 @@
     </div>
   </div>
 </section>
+<!------------------------
+Sort
+-------------------------->
+<section id="sort_container">
+  <label name="sort" for="sort">Sort By: </label>
+  <select id="sort">
+    <option value="newest">Newest</option>
+    <option value="price_high">Price: High-Low</option>
+    <option value="price_low">Price: Low-High</option>
+  </select>
+</section>
 
-  <!---------------------
-  
-  ----------------------->
+<!---------------------
+API  
+----------------------->
+<main id="products_container">
+ <!-- DOM -->
+</main>
   <script src="main.js"></script>
 </body>
 </html>

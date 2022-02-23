@@ -163,6 +163,16 @@
     opacity: 1;
   }
 }
+// ------------------------
+// Sort
+// ------------------------
+#sort_container {
+  // border: 1px solid red;
+  width: 99%;
+  text-align: end;
+  margin-top: 30px;
+  
+}
 
 @media (min-width: 1000px) {
   #header_container {
@@ -179,6 +189,9 @@
     }
   }
 }
+
+
+
 @media (min-width: 1800px) {
   & .slide_images img {
     width: 60%;
