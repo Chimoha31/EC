@@ -9,7 +9,9 @@
     color: $black;
   }
 }
-
+// -------------------------
+// header
+// -------------------------
 #header_container {
   // border: 1px solid red;
   position: sticky;
@@ -44,7 +46,7 @@
   }
 }
 
-// --------------------------
+// -------------------------
 // animation-slide
 // -------------------------
 #animation_slide {
@@ -182,28 +184,27 @@
   justify-content: space-around;
   margin-top: 100px;
 
-
-
-  .dom_container{
+  .dom_container {
     border: 1px solid #ccc;
     width: 300px;
     margin: 50px 30px;
     padding: 10px;
   }
-  
-  & img{
-    display: block;
-    margin: 0 auto;
-    width: 200px;
-    height: 230px;
-  }
-  & h4, p {
-    text-align: center;
+  & .item {
+    height: 75%;
+    & img {
+      display: block;
+      margin: 0 auto;
+      width: 200px;
+      height: 230px;
+    }
+    & h4,
+    p {
+      text-align: center;
+    }
   }
 }
 
 // ------------------------
 // Break points
 // ------------------------
-
-

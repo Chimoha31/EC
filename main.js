@@ -38,12 +38,10 @@ async function callAPI() {
     // button and heart
     const div_btn = document.createElement('div');
     const btn = document.createElement('button');
-    const heart = document.createElement('span');
     div_btn.setAttribute('class', 'btn_heart');
     div_btn.appendChild(btn);
-    btn.textContent = 'Add to cart';
-    div_btn.appendChild(heart);
-    heart.textContent = '♡';
+    btn.textContent = 'Add to Cart';
+    div_btn.insertAdjacentHTML('beforeend', '<button>Favorite<i class="fas fa-heart"></i></button>');
     dom_container.appendChild(div_btn);
   })
   console.log(products_container);
