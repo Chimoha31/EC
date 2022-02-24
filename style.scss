@@ -1,4 +1,5 @@
-@import "variables";
+@import "components/variables";
+@import "components/button";
 
 * {
   padding: 0;
@@ -184,9 +185,13 @@
   justify-content: space-around;
   margin-top: 100px;
 
-  .item {
+
+
+  .dom_container{
+    border: 1px solid #ccc;
     width: 300px;
-    margin: 20 auto;
+    margin: 50px 30px;
+    padding: 10px;
   }
   
   & img{

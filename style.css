@@ -256,9 +256,11 @@
   margin-top: 100px;
 }
 
-#products_container .item {
+#products_container .dom_container {
+  border: 1px solid #ccc;
   width: 300px;
-  margin: 20 auto;
+  margin: 50px 30px;
+  padding: 10px;
 }
 
 #products_container img {
