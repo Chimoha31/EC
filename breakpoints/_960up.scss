@@ -1,0 +1,14 @@
+// tablet
+  #header_container {
+    justify-content: space-around;
+  }
+  #animation_slide {
+    background-color: $mainBackground;
+    height: 50vh;
+    & .slide_images img {
+      border-radius: 10px;
+      width: 70%;
+      height: 50vh;
+      left: 15%;
+    }
+  }

@@ -1,0 +1,11 @@
+// PC
+#animation_slide {
+  background-color: $mainBackground;
+  height: 55vh;
+  & .slide_images img {
+    border-radius: 10px;
+    width: 70%;
+    height: 55vh;
+    left: 15%;
+  }
+}
