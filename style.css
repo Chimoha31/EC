@@ -243,6 +243,35 @@
   margin-top: 30px;
 }
 
+#products_container {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 100px;
+}
+
+#products_container .item {
+  width: 300px;
+  margin: 20 auto;
+}
+
+#products_container img {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 230px;
+}
+
+#products_container h4, #products_container p {
+  text-align: center;
+}
+
 @media (min-width: 1000px) {
   #header_container {
     -ms-flex-pack: distribute;
