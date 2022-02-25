@@ -34,12 +34,14 @@ async function callAPI() {
     p.textContent = `$ ${product.price}`;
     div.appendChild(p);
 
-    // button and heart
     const div_btn = document.createElement("div");
-    const btn = document.createElement("button");
     div_btn.setAttribute("class", "btn_heart");
-    div_btn.appendChild(btn);
-    btn.textContent = "Add to Cart";
+    // Add to cart Button 
+    div_btn.insertAdjacentHTML(
+      "afterbegin",
+      '<button class="cart_btn">Add to Cart</button>'
+    );
+    // favorite Button
     div_btn.insertAdjacentHTML(
       "beforeend",
       '<button class="ht_btn">Favorite<sapn class="fas fa-heart"></sapn></button>'
@@ -47,17 +49,36 @@ async function callAPI() {
     dom_container.appendChild(div_btn);
   });
 
-  // Change heart color to red when clicked
-  const btnAll = document.querySelectorAll('.ht_btn');
+  // 1.Change heart color to red when clicked
+  // 2. Change heart number in header everytime fav btn is clicked
+  // 1.
+  const favBtnAll = document.querySelectorAll('.ht_btn');
   const heartIconAll = document.querySelectorAll('.fas.fa-heart');
- 
-  for(let i = 0; i < btnAll.length; i++) {
-    btnAll[i].addEventListener('click', function() {
+  // 2.
+  const heartIconNum = document.querySelector('.far.fa-heart');
+  let heartCount = 0;
+  // 1 & 2
+  for(let i = 0; i < favBtnAll.length; i++) {
+    favBtnAll[i].addEventListener('click', function() {
       heartIconAll[i].classList.toggle('heart_color');
-    })
+      
+      heartIconNum.textContent = heartCount + 1;
+      heartCount++;
+    });
   }
+  
+ //Change cart number in header everytime cart btn is clicked
+  const cartBtnAll = document.querySelectorAll('.cart_btn');
+  const cartIconNum = document.querySelector('.fa-cart-arrow-down');
+  let cartCount = 0;
 
-
+  for(let i = 0; i < cartBtnAll.length; i++) {
+    cartBtnAll[i].addEventListener('click', function() {
+      cartIconNum.textContent = cartCount + 1;
+      cartCount++;
+    });
+  }
+  
   console.log(products_container);
 }
 
