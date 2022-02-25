@@ -14,18 +14,19 @@
     border-radius: 20px;
     margin-bottom: 5px;
   }
-  & button:nth-child(2) {
+  & i {
     width: 70%;
     height: 30px;
     border: 2px solid $borderColor;
     background-color: $white;
     border-radius: 20px;
-    & .fa-heart {
+   
+    &.fa-heart {
       color: $borderColor;
       text-align: center;
       margin-left: 8px;
       font-size: 15px;
-      &:hover {
+      &.heart_color {
         color: red;
         background-color: $white;
       }

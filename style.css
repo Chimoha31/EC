@@ -25,7 +25,7 @@
   margin-bottom: 5px;
 }
 
-.btn_heart button:nth-child(2) {
+.btn_heart i {
   width: 70%;
   height: 30px;
   border: 2px solid #ccc;
@@ -33,14 +33,14 @@
   border-radius: 20px;
 }
 
-.btn_heart button:nth-child(2) .fa-heart {
+.btn_heart i.fa-heart {
   color: #ccc;
   text-align: center;
   margin-left: 8px;
   font-size: 15px;
 }
 
-.btn_heart button:nth-child(2) .fa-heart:hover {
+.btn_heart i.fa-heart.heart_color {
   color: red;
   background-color: #fff;
 }
