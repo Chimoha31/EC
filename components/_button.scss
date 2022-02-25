@@ -1,3 +1,9 @@
+
+
+// ----------------------
+// Add to Cart
+// Favorite
+// ----------------------
 .btn_heart {
   width: 100%;
   margin-top: 20px;
@@ -5,31 +11,32 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  & button:nth-child(1) {
+  & button {
     width: 70%;
     height: 30px;
-    background-color: $black;
-    color: $white;
     border-radius: 20px;
-    margin-bottom: 5px;
-  }
-  & i {
-    width: 70%;
-    height: 30px;
-    border: 2px solid $borderColor;
-    background-color: $white;
-    border-radius: 20px;
-   
-    &.fa-heart {
-      color: $borderColor;
-      text-align: center;
-      margin-left: 8px;
-      font-size: 15px;
-      &.heart_color {
-        color: red;
-        background-color: $white;
+    &:hover {
+      cursor: pointer;
+    }
+    &:nth-child(1) {
+      background-color: $black;
+      color: $white;
+      margin-bottom: 5px;
+    }
+    &:nth-child(2) {
+      border: 2px solid $borderColor;
+      background-color: $white;
+     
+      & .fa-heart {
+        color: $borderColor;
+        text-align: center;
+        margin-left: 5px;
+        font-size: 15px;
+        &.heart_color {
+          color:$heartColor;
+          background-color: $white;
+        }
       }
     }
-  }
+  } 
 }

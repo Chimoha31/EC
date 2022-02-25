@@ -42,20 +42,24 @@ async function callAPI() {
     btn.textContent = "Add to Cart";
     div_btn.insertAdjacentHTML(
       "beforeend",
-      '<i class="fas fa-heart"></i>'
+      '<button class="ht_btn">Favorite<sapn class="fas fa-heart"></sapn></button>'
     );
     dom_container.appendChild(div_btn);
-    
-    const heartIcon = document.querySelectorAll('.fa-heart');
-    for(let i = 0; i < heartIcon.length; i++) {
-      heartIcon[i].addEventListener('click',function() {
-        heartIcon[i].classList.toggle('heart_color');
-      })
-    }
   });
+
+  // Change heart color to red when clicked
+  const btnAll = document.querySelectorAll('.ht_btn');
+  const heartIconAll = document.querySelectorAll('.fas.fa-heart');
+ 
+  for(let i = 0; i < btnAll.length; i++) {
+    btnAll[i].addEventListener('click', function() {
+      heartIconAll[i].classList.toggle('heart_color');
+    })
+  }
+
+
   console.log(products_container);
 }
 
 callAPI();
 
-  // heart color change to red when clicked

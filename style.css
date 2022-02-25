@@ -16,32 +16,36 @@
           align-items: center;
 }
 
-.btn_heart button:nth-child(1) {
+.btn_heart button {
   width: 70%;
   height: 30px;
+  border-radius: 20px;
+}
+
+.btn_heart button:hover {
+  cursor: pointer;
+}
+
+.btn_heart button:nth-child(1) {
   background-color: #1a1919;
   color: #fff;
-  border-radius: 20px;
   margin-bottom: 5px;
 }
 
-.btn_heart i {
-  width: 70%;
-  height: 30px;
+.btn_heart button:nth-child(2) {
   border: 2px solid #ccc;
   background-color: #fff;
-  border-radius: 20px;
 }
 
-.btn_heart i.fa-heart {
+.btn_heart button:nth-child(2) .fa-heart {
   color: #ccc;
   text-align: center;
-  margin-left: 8px;
+  margin-left: 5px;
   font-size: 15px;
 }
 
-.btn_heart i.fa-heart.heart_color {
-  color: red;
+.btn_heart button:nth-child(2) .fa-heart.heart_color {
+  color: rgba(240, 29, 29, 0.781);
   background-color: #fff;
 }
 
