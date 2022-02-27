@@ -61,12 +61,26 @@ async function callAPI() {
   // 1, 2 & 3
   for(let i = 0; i < favBtnAll.length; i++) {
     favBtnAll[i].addEventListener('click', function() {
+      const modalBody = document.querySelector('.modal-body');
+      const imgFav = document.createElement('img');
+      const h4Fav = document.createElement('h4');
+      const pFav = document.createElement('p');
       if(heartIconAll[i].classList.toggle('heart_color')){
         heartIconNum.textContent = heartCount + 1;       
         heartCount++;
-      }else {
+        
+        // In Favorite Modal
+        modalBody.appendChild(imgFav);
+        modalBody.appendChild(h4Fav);
+        modalBody.appendChild(pFav);
+        console.log(modalBody);
+        imgFav.setAttribute('src', `${products[i].image}`);
+        h4Fav.textContent = products[i].title;
+        pFav.textContent = products[i].price;
+      }else{
         heartIconNum.textContent = heartCount - 1;       
         heartCount--;
+        modalBody.remove();
       }
     });
   }
@@ -91,4 +105,4 @@ callAPI();
 
 
 //  modal
-const modal_container = document.querySelector('.modal_container');
+// const modal_container = document.querySelector('.modal_container');

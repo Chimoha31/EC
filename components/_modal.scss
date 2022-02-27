@@ -1,3 +1,18 @@
+// -------------------
+// In Favorite Modal
+// -------------------
 .modal-body {
   overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  & img {
+    width: 100px;
+    height: 100px;
+  }
+  & p::before {
+    content: "$ ";
+  }
 }
+
