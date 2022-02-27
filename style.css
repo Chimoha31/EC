@@ -1,3 +1,17 @@
+.modal-body > div {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 40px;
+}
+
+.modal-body > div button {
+  width: 50%;
+  height: 30px;
+  border-radius: 20px;
+  background-color: #1a1919;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
 .btn_heart {
   width: 100%;
   margin-top: 20px;
@@ -49,7 +63,7 @@
   background-color: #fff;
 }
 
-.modal-body {
+.modal-body > div {
   overflow: scroll;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -65,12 +79,12 @@
           align-items: center;
 }
 
-.modal-body img {
+.modal-body > div img {
   width: 100px;
   height: 100px;
 }
 
-.modal-body p::before {
+.modal-body > div p::before {
   content: "$ ";
 }
 

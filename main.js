@@ -62,25 +62,35 @@ async function callAPI() {
   for(let i = 0; i < favBtnAll.length; i++) {
     favBtnAll[i].addEventListener('click', function() {
       const modalBody = document.querySelector('.modal-body');
+      const containerFav = document.createElement('div');
       const imgFav = document.createElement('img');
       const h4Fav = document.createElement('h4');
       const pFav = document.createElement('p');
+      const deleteFav = document.createElement('button');
+      containerFav.appendChild(imgFav);
+      containerFav.appendChild(h4Fav);
+      containerFav.appendChild(pFav);
+      containerFav.appendChild(deleteFav);
+      modalBody.appendChild(containerFav);
       if(heartIconAll[i].classList.toggle('heart_color')){
         heartIconNum.textContent = heartCount + 1;       
         heartCount++;
         
         // In Favorite Modal
-        modalBody.appendChild(imgFav);
-        modalBody.appendChild(h4Fav);
-        modalBody.appendChild(pFav);
-        console.log(modalBody);
         imgFav.setAttribute('src', `${products[i].image}`);
         h4Fav.textContent = products[i].title;
         pFav.textContent = products[i].price;
+        deleteFav.textContent = 'Delete';
+        console.log(modalBody);
+
+        // Delete Fav Item when clicked
+        deleteFav.addEventListener('click',() => {
+          containerFav.remove();
+        })
       }else{
         heartIconNum.textContent = heartCount - 1;       
-        heartCount--;
-        modalBody.remove();
+        heartCount--;  
+        console.log(containerFav[i]);
       }
     });
   }

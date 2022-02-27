@@ -1,5 +1,18 @@
-
-
+// ----------------------
+// In Favorite Modal
+// ----------------------
+.modal-body>div {
+  border-bottom: 1px solid $borderColor;
+  margin-bottom: 40px;
+  & button {
+    width: 50%;
+    height: 30px;
+    border-radius: 20px;
+    background-color: $black;
+    color: $white;
+    margin-bottom: 20px;
+  }
+}
 // ----------------------
 // Add to Cart
 // Favorite
@@ -26,17 +39,17 @@
     &:nth-child(2) {
       border: 2px solid $borderColor;
       background-color: $white;
-     
+
       & .fa-heart {
         color: $borderColor;
         text-align: center;
         margin-left: 5px;
         font-size: 15px;
         &.heart_color {
-          color:$heartColor;
+          color: $heartColor;
           background-color: $white;
         }
       }
     }
-  } 
+  }
 }
