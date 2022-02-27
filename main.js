@@ -88,3 +88,7 @@ async function callAPI() {
 
 callAPI();
 
+
+
+//  modal
+const modal_container = document.querySelector('.modal_container');
