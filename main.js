@@ -50,24 +50,28 @@ async function callAPI() {
   });
 
   // 1.Change heart color to red when clicked
-  // 2. Change heart number in header everytime fav btn is clicked
+  // 2.Change heart number in header everytime fav btn is clicked
+  // 3.Count plus when heart is red, Minus when heart click again to unmark.
   // 1.
   const favBtnAll = document.querySelectorAll('.ht_btn');
   const heartIconAll = document.querySelectorAll('.fas.fa-heart');
   // 2.
   const heartIconNum = document.querySelector('.far.fa-heart');
   let heartCount = 0;
-  // 1 & 2
+  // 1, 2 & 3
   for(let i = 0; i < favBtnAll.length; i++) {
     favBtnAll[i].addEventListener('click', function() {
-      heartIconAll[i].classList.toggle('heart_color');
-      
-      heartIconNum.textContent = heartCount + 1;
-      heartCount++;
+      if(heartIconAll[i].classList.toggle('heart_color')){
+        heartIconNum.textContent = heartCount + 1;       
+        heartCount++;
+      }else {
+        heartIconNum.textContent = heartCount - 1;       
+        heartCount--;
+      }
     });
   }
   
- //Change cart number in header everytime cart btn is clicked
+ //1.Change cart number in header everytime cart btn is clicked
   const cartBtnAll = document.querySelectorAll('.cart_btn');
   const cartIconNum = document.querySelector('.fa-cart-arrow-down');
   let cartCount = 0;
