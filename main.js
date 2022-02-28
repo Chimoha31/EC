@@ -67,11 +67,13 @@ async function callAPI() {
       const h4Fav = document.createElement('h4');
       const pFav = document.createElement('p');
       const deleteFav = document.createElement('button');
+      containerFav.setAttribute('class', 'fav');
       containerFav.appendChild(imgFav);
       containerFav.appendChild(h4Fav);
       containerFav.appendChild(pFav);
       containerFav.appendChild(deleteFav);
       modalBody.appendChild(containerFav);
+
       if(heartIconAll[i].classList.toggle('heart_color')){
         heartIconNum.textContent = heartCount + 1;       
         heartCount++;
@@ -89,17 +91,11 @@ async function callAPI() {
           heartIconNum.textContent = heartCount - 1;       
           heartCount--;  
         })
-      }else if(!heartIconAll[i].hasAttribute('heart_color')){
+      }else{
         heartIconNum.textContent = heartCount - 1;       
         heartCount--;  
-        HTMLElement.prototype.empty = function() {
-          while (this.firstChild) {
-              this.removeChild(this.firstChild);
-          }
-        }
-        containerFav.empty();
+        containerFav.remove();
         console.log(modalBody);
-        
       }
     });
   }
