@@ -82,15 +82,19 @@ async function callAPI() {
         pFav.textContent = products[i].price;
         deleteFav.textContent = 'Delete';
         console.log(modalBody);
-
-        // Delete Fav Item when clicked
+        
+        // Delete Fav Item in modal when clicked
         deleteFav.addEventListener('click',() => {
           containerFav.remove();
+          heartIconNum.textContent = heartCount - 1;       
+          heartCount--;  
+          // console.log(heartIconAll[i].classList.remove());
         })
       }else{
         heartIconNum.textContent = heartCount - 1;       
         heartCount--;  
-        console.log(containerFav[i]);
+        modalBody[i].innerHTML = '';
+        console.log(modalBody);
       }
     });
   }
