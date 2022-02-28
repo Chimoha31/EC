@@ -88,13 +88,18 @@ async function callAPI() {
           containerFav.remove();
           heartIconNum.textContent = heartCount - 1;       
           heartCount--;  
-          // console.log(heartIconAll[i].classList.remove());
         })
-      }else{
+      }else if(!heartIconAll[i].hasAttribute('heart_color')){
         heartIconNum.textContent = heartCount - 1;       
         heartCount--;  
-        modalBody[i].innerHTML = '';
+        HTMLElement.prototype.empty = function() {
+          while (this.firstChild) {
+              this.removeChild(this.firstChild);
+          }
+        }
+        containerFav.empty();
         console.log(modalBody);
+        
       }
     });
   }
@@ -110,7 +115,6 @@ async function callAPI() {
       cartCount++;
     });
   }
-  
   console.log(products_container);
 }
 
